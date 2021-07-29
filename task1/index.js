@@ -89,6 +89,7 @@ function goToSleep(timeout) {
 }
 
 
+
 wakeUp(652)
     .then(() => {
         return haveShower(100);
