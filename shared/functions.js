@@ -1,8 +1,9 @@
-function wakeUp(timeout) {
+function wakeUp(wakeUpTime, timeout) {
     return new Promise((resolve, reject) => {
+        const haveTimeForShower = wakeUpTime <= 7;
         setTimeout(() => {
             console.log('Good morning!');
-            resolve();
+            resolve(haveTimeForShower);
         }, timeout);
     })
 }

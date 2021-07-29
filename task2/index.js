@@ -1,6 +1,8 @@
 async function beginDay() {
-    await wakeUp(600);
-    await haveShower(100);
+    const haveTimeForShower = await wakeUp(6, 600);
+    if (haveTimeForShower) {
+        await haveShower(100);
+    }
     await haveBreakfast(1000);
     await takeChildToTheKindergarten(1500);
     await goToWork(200);
@@ -11,4 +13,5 @@ async function beginDay() {
     await goToSleep(200);
     console.log('The day is ended)');
 }
+
 beginDay();

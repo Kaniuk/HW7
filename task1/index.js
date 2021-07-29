@@ -1,6 +1,8 @@
-wakeUp(652)
-    .then(() => {
-        return haveShower(100);
+wakeUp(7, 652)
+    .then((haveTimeForShower) => {
+        if (haveTimeForShower) {
+            return haveShower(100);
+        }
     })
     .then(() => {
         return haveBreakfast(1000);
